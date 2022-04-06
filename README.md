@@ -21,8 +21,10 @@ Elabore um pequeno programa que utilize uma matriz N x N, com o valor de N forne
 - Andando na matriz conforme as regras acima, qual o maior caminho do início até o final, sabendo-se que a soma das posições representa o tamanho do caminho.
 
 ## Beginning
+<p align="justify">
+Para o desenvolvimento de uma matriz N x N com números inteiros aleatórios de 0 a 99, utilizei o método de ordenção em bolha para criar um loop, então criei os métodos <code>startMatriz</code> para gerar a matriz randômica e <code>printMatriz</code> para imprimi-la.
+</p>
 
-Para o desenvolvimento de uma matriz N x N com números inteiros aleatórios de 0 a 99, utilizei o método de ordenção em bolha para criar um loop, então criei os métodos `startMatriz` para gerar a matriz randômica e `printMatriz` para imprimi-la.
 
 
 ```c
@@ -44,9 +46,9 @@ void printMatriz(int n, int A[n][n]){
 ```
 
 ## Brainstorm
-
-Para a lógica do contador de instruções precisei organizar um `brainstorm` buscando analisar as possíveis condições que o programa deveria seguir para se manter dentro das regras prescritas pelo professor.
-  
+<p align="justify">
+Para a lógica do contador de instruções precisei organizar um <code>brainstorm</code> buscando analisar as possíveis condições que o programa deveria seguir para se manter dentro das regras prescritas pelo professor.
+</p>
 
 ```c
 enquanto(i < n e j < n){
@@ -122,7 +124,7 @@ enquanto(i < n e j < n){
 ## Método de Contar Instruções
 
 <p align="justify">
-Partindo do apresentado, busquei criar um loop que trabalha até chegar ao último termo da matriz N x N. Além disso, apliquei as ideias do "brainstorm", implementando as condições previstas, ajustando para que o valor da soma fosse guardado e criando um método para atribuir "-1" ao valor das posições NxN após serem percorridas, de acordo com as regras do programa, a fim de marcar o caminho percorrido na matriz.
+Partindo do apresentado, busquei criar um loop que trabalha até chegar ao último termo da matriz N x N. Além disso, apliquei as ideias do <code>brainstorm</code>, implementando as condições previstas, ajustando para que o valor da soma fosse guardado e criando um método para atribuir o <code>-1</code> ao valor das posições NxN após serem percorridas, de acordo com as regras do programa, a fim de marcar o caminho percorrido na matriz.
 </p>
 
 ```c
@@ -231,8 +233,9 @@ int instructCounter(int n, int A[n][n]){
 }
 ```
 ## Testando
-
-Criando um exemplo de teste para o método `instructCounter` para uma matriz com N = 7.
+<p align="justify">
+	Criando um exemplo de teste para o método <code>instructCounter</code> para uma matriz com N = 7.
+</p>
 
 <p align="center">
 	<img src="imgs/matrizN7.png"/> 
