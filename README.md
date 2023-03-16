@@ -58,73 +58,102 @@ Para a lógica do contador de instruções precisei organizar um <code>brainstor
 </p>
 
 ```c
-enquanto(i < n e j < n){
-	*condicao 1*
-	se(j = 0 e i < n-1){
-		*condicao 1.1*
-		se(direita >= abaixo e direita != -1){
-			escolho direita
-		}
-		*condicao 1.2*
-		senao{
-			escolho abaixo
-		}
-	}
-	*condicao 2*
-	senao se(i = n-1){
-		escolho direita
-	}
-	*condicao 3*
-	senao se(j = n-1){
-		*condicao 3.1*
-		se(esquerda >= abaixo e esquerda != -1){
-			escolho esquerda
-		}
-		*condicao 3.2*
-		senao{
-			escolho abaixo
-		}
-	}
-	*condicao 4*
-	senao{
-		*condicao 4.1*
-		se(direita = -1){
-			*condicao 4.1.1*
-			se(abaixo >= esquerda){
-				escolho abaixo
-			}
-			*condicao 4.1.2*
-			senao{
-				escolho esquerda
-			}
-		}
-		*condicao 4.2*
-		senao se(esquerda = -1){
-			*condicao 4.2.1*
-			se(abaixo >= direita){
-				escolho abaixo
-			}
-			*condicao 4.2.2*
-			senao{
-				escolho direita
-			}
-		}
-		*condicao 4.3*
-		senao{
-			*condicao 4.3.1*
-			se(abaixo >= direita e direita >= esquerda){
-				escolho abaixo
-			}
-			*condicao 4.3.2*
-			senao se(direita >= abaixo e direita >= esquerda){
-				escolho direita
-			}
-			*condicao 4.3.3*
-			senao(esquerda >= abaixo e esquerda >= direita){
-				escolho esquerda
-			}
-		}
-	}
+// funcao que percorre a matriz e busca o caminho guloso
+int caminharMatriz(int **mat, int n, int m){
+   
+   // inicializa i, j e soma
+   int i=0, j=0, sum=0;
+   
+   // atribui o valor da posicao [0][0] a soma
+   sum += mat[0][0];
+   
+   // atribui -1 ao valor da posição [0][0]
+   mat[0][0] = -1;
+	
+   enquanto (i < quantidade(linhas) e j < quantidade(colunas)){	
+ 
+    se (linha(i) for igual linha maxima){
+        // soma recebe valor atual da matriz
+        // atribui -1 ao valor atual da matriz
+        // anda coluna
+    }
+    senao{
+        se ( coluna(j) atual = primeira coluna(j) ){
+            se ( (direita >= abaixo) e (direita >= diagonal_direita) ){
+                anda coluna
+                soma recebe valor atual da matriz
+                atribui -1 ao valor atual da matriz
+            }
+            senao se ( (abaixo >= direita) e (abaixo >= diagonal_direita) ){
+                anda linha
+                soma recebe valor atual da matriz 
+                atribui -1 ao valor atual da matriz
+            }
+            senao ( (diagonal_direita >= abaixo) e (diagonal_direita >= direita) ){
+                anda linha
+                anda coluna --> caminha diagonal direita
+                soma recebe valor atual da matriz
+                atribui -1 ao valor atual da matriz
+            }
+        }
+        senao se ( coluna(j) atual = coluna(máxima) ){
+            se ( (abaixo >= esquerda) && (abaixo >= diagonal_esquerda) ){
+                anda linha
+                soma recebe valor atual da matriz
+                atribui -1 ao valor atual da matriz
+            }
+            senao se ( (esquerda >= abaixo) && (esquerda >= diagonal_esquerda) ){
+                volta coluna
+                soma recebe valor atual da matriz
+                atribui -1 ao valor atual da matriz
+            }
+            senao ( (diagonal_esquerda >= abaixo) && (diagonal_esquerda >= esquerda) ){
+                volta coluna
+                anda linha --> caminha diagonal esquerada
+                soma recebe valor atual da matriz
+                atribui -1 ao valor atual da matriz
+            }
+        }
+        senao (caso esteja no meio){   
+            se ( (abaixo >= esquerda)  e  (abaixo >= direita)
+             e   (abaixo >= diagonal_esquerda) e (abaixo >= diagonal_direita) ){
+                anda linha
+                soma recebe valor atual da matriz
+                atribui -1 ao valor atual da matriz
+            }   
+            senao se ( (esquerda >= abaixo) e (esquerda >= direita) 
+                   e   (esquerda >= diadonal_esquerda) e (esquerda >= diagonal_direita) ){
+                volta coluna
+                soma recebe valor atual da matriz
+                atribui -1 ao valor atual da matriz
+            }
+            senao se ( (direita >= abaixo) e (direita >= esquerda) e
+               	      e   (direita >= diagonal_esquerda) e (direita >= diagonal_direita) ){
+                anda coluna
+                soma recebe valor atual da matriz
+                atribui -1 ao valor atual da matriz
+            }
+            senao se ( (diagonal_esquerda >= diagonal_direita) ){
+                volta coluna
+                anda linha
+                soma recebe valor atual da matriz
+                atribui -1 ao valor atual da matriz
+            }
+            senao ( (diagonal_direita >= diagonal_esquerda) ){
+                anda coluna
+                anda linha --> caminha diagonal direita
+                soma recebe valor atual da matriz
+                atribui -1 ao valor atual da matriz
+            }
+        }
+    }
+    se ( (linha(i) = linha(máxima)) e (coluna(j) = coluna(máxima)) ){
+        soma recebe valor atual da matriz
+        atribui -1 ao valor atual da matriz
+        retorna o valor total da soma
+    }
+   }
+   a função retorna a soma;
 }
 ```
 
