@@ -59,7 +59,7 @@ Para a lógica do contador de instruções precisei organizar um <code>brainstor
 
 ```c
 // funcao que percorre a matriz e busca o caminho guloso
-int caminharMatriz(int **mat, int n, int m){
+void caminharMatriz(int **mat, int n, int m){
    
    // inicializa i, j e soma
    int i=0, j=0, sum=0;
@@ -72,26 +72,30 @@ int caminharMatriz(int **mat, int n, int m){
 	
    enquanto (i < quantidade(linhas) e j < quantidade(colunas)){	
  
-    se (linha(i) for igual linha maxima){
-        // soma recebe valor atual da matriz
-        // atribui -1 ao valor atual da matriz
-        // anda coluna
+    se ( linha(i) atual = linha(máxima) ){
+        soma recebe valor atual da matriz
+        atribui -1 ao valor atual da matriz
+        anda coluna
+        INSTRUÇÃO --> CAMINHA P/ DIREITA
     }
     senao{
         se ( coluna(j) atual = primeira coluna(j) ){
             se ( (direita >= abaixo) e (direita >= diagonal_direita) ){
                 anda coluna
+                INSTRUÇÃO --> CAMINHA P/ DIREITA
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }
             senao se ( (abaixo >= direita) e (abaixo >= diagonal_direita) ){
                 anda linha
+                INSTRUÇÃO --> CAMINHA P/ BAIXO
                 soma recebe valor atual da matriz 
                 atribui -1 ao valor atual da matriz
             }
             senao ( (diagonal_direita >= abaixo) e (diagonal_direita >= direita) ){
                 anda linha
-                anda coluna --> caminha diagonal direita
+                anda coluna 
+                INSTRUÇÃO --> CAMINHA P/ DIAGONAL DIREITA
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }
@@ -99,17 +103,20 @@ int caminharMatriz(int **mat, int n, int m){
         senao se ( coluna(j) atual = coluna(máxima) ){
             se ( (abaixo >= esquerda) && (abaixo >= diagonal_esquerda) ){
                 anda linha
+                INSTRUÇÃO --> CAMINHA P/ BAIXO
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }
             senao se ( (esquerda >= abaixo) && (esquerda >= diagonal_esquerda) ){
                 volta coluna
+                INSTRUÇÃO --> CAMINHA P/ ESQUERDA
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }
             senao ( (diagonal_esquerda >= abaixo) && (diagonal_esquerda >= esquerda) ){
                 volta coluna
-                anda linha --> caminha diagonal esquerada
+                anda linha 
+                INSTRUÇÃO --> CAMINHA P/ DIAGONAL ESQUERDA
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }
@@ -118,30 +125,35 @@ int caminharMatriz(int **mat, int n, int m){
             se ( (abaixo >= esquerda)  e  (abaixo >= direita)
              e   (abaixo >= diagonal_esquerda) e (abaixo >= diagonal_direita) ){
                 anda linha
+                INSTRUÇÃO --> CAMINHA P/ BAIXO
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }   
             senao se ( (esquerda >= abaixo) e (esquerda >= direita) 
                    e   (esquerda >= diadonal_esquerda) e (esquerda >= diagonal_direita) ){
                 volta coluna
+                INSTRUÇÃO --> CAMINHA P/ ESQUERDA
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }
             senao se ( (direita >= abaixo) e (direita >= esquerda) e
                	      e   (direita >= diagonal_esquerda) e (direita >= diagonal_direita) ){
                 anda coluna
+                INSTRUÇÃO --> CAMINHA P/ DIREITA
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }
             senao se ( (diagonal_esquerda >= diagonal_direita) ){
                 volta coluna
                 anda linha
+                INSTRUÇÃO --> CAMINHA P/ ESQUERDA
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }
             senao ( (diagonal_direita >= diagonal_esquerda) ){
                 anda coluna
-                anda linha --> caminha diagonal direita
+                anda linha 
+                INSTRUÇÃO --> CAMINHA P/ DIAGONAL DIREITA
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }
@@ -150,10 +162,10 @@ int caminharMatriz(int **mat, int n, int m){
     se ( (linha(i) = linha(máxima)) e (coluna(j) = coluna(máxima)) ){
         soma recebe valor atual da matriz
         atribui -1 ao valor atual da matriz
-        retorna o valor total da soma
+        RETORNA o valor total da SOMA
     }
    }
-   a função retorna a soma;
+   RETORNA a SOMA total para a função
 }
 ```
 
