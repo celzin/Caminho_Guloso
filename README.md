@@ -10,7 +10,7 @@
 <p> </p>
 <p> </p>
 
-## Problema
+## Apresentação do Problema
 <p align="justify">
 O objetivo desse trabalho é elaborar um programa para caminhar por um conjunto de matrizes N x N, com o valor de N e as matrizes sendo fornecidas como entrada do programa em formato de arquivo, objetivando encontrar o maior valor final seguindo um conjunto de regras preestabelecidas.
 
@@ -28,7 +28,7 @@ O objetivo desse trabalho é elaborar um programa para caminhar por um conjunto 
 	
 </p>
 
-## Beginning
+## 
 <p align="justify">
 Para o desenvolvimento de uma matriz N x N com números inteiros aleatórios de 0 a 99, utilizei o método de ordenção em bolha para criar um loop, então criei os métodos <code>startMatriz</code> para gerar a matriz randômica e <code>printMatriz</code> para imprimi-la.
 </p>
