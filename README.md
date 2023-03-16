@@ -235,7 +235,7 @@ Pelo que pude notar sim, uma vez que o caminho seguido pelo programa, através d
 </p>
 -->
 
-# Compilação e Execução
+## Compilação e Execução
 
 Esse pequeno exemplo possui um arquivo Makefile que realiza todo o procedimento de compilação e execução. Para tanto, temos as seguintes diretrizes de execução:
 
@@ -247,7 +247,7 @@ Esse pequeno exemplo possui um arquivo Makefile que realiza todo o procedimento 
 |  `make run`            | Executa o programa da pasta build após a realização da compilação                                     |
 |  `make r`              | Apaga a última compilação, Executa a compilação e logo após Executa também o programa da basta build  |
 
-# Contatos
+## Contatos
 
 <div style="display: inline-block;">
 <a href="https://t.me/celso_vsf">
