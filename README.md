@@ -206,7 +206,7 @@ Partindo do apresentado, busquei criar um loop que trabalha até chegar ao últi
 </p>
 
 <p align="center">
-	<img src="imgs/matrizN7.png"/> 
+	<img src="imgs/"/> 
 </p>
 
 <p align="center">
