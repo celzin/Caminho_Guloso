@@ -9,16 +9,15 @@
 <p> </p>
 <p> </p>
 
-## Abstract
+## Problema
 
 Elabore um pequeno programa que utilize uma matriz N x N, com o valor de N fornecido como entrada do programa, para executar a seguinte operação:
-- Preenche a matriz N x N com números inteiros aleatórios de 0 a 99;
-- Considere a posição Linha 0 e Coluna 0 (0,0) como início;
-- Considere a posição (N, N) como posição final;
-- Percorra a matriz a partir do início, somando a cada passo, o próximo maior valor encontrado;
-- O próximo valor pode ser o que está na mesma linha e imediatamente à direita, imediatamente à esquerda, bem como, o que está na coluna abaixo do numero corrente;
-- Há apenas uma exceção de percurso. Ao chegar na última linha deve-se percorre-la até o fim sem realizar mais migrações para colunas acima. 
-- Andando na matriz conforme as regras acima, qual o maior caminho do início até o final, sabendo-se que a soma das posições representa o tamanho do caminho.
+- Criar um sistema que leia K matrizes quadradas no tamanho NxN.
+- Seu programa deve enumerá-las, de forma a deixa-las organizadas para processamento. 
+- Partindo da primeira matriz, você deve iniciar de um ponto preestabelecido, esse pode ser fornecido pelo usuário ou estar contido em arquivos extras de configuração. Não é permitido definir diretamente no código. 
+- A partir da primeira matriz, você tem como regras: (a) avançar para a próxima coluna; (b) retroceder para coluna anterior; (c)  saltar para a linha de baixo; (d) ir em diagonal para baixo. Todas essas regras só se aplicam se a casa (posição i,j da matriz) ainda não tenha sido descoberta ou já processada.
+- Para caminhar você deve sempre optar pelo valor da próxima casa, valor esse que deve ser o maior dentre eles. Caso haja empate entre casas, crie uma regra para adotar sempre uma mesma decisão de caminhamento. 
+- Ao alcançar a última linha e coluna da matriz, selecione a próxima matriz e repita todo o processo novamente. Por fim, apresente ao usuário qual foi o caminho adotado e qual a soma obtida do caminho realizado. 
 
 ## Beginning
 <p align="justify">
