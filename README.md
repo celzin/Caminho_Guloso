@@ -54,8 +54,14 @@ void printMatriz(int n, int A[n][n]){
 
 ## Brainstorm
 <p align="justify">
-Para a lógica do contador de instruções precisei organizar um <code>brainstorm</code> buscando analisar as possíveis condições que o programa deveria seguir para se manter dentro das regras prescritas pelo professor.
+Para a lógica do contador de instruções precisei organizar um <code>brainstorm</code> buscando analisar as possíveis condições que o programa deveria seguir para se manter dentro das regras prescritas pelo professor, sendo elas:
 </p>
+
+- [x] Avançar para a próxima coluna; 
+- [x] Retroceder para coluna anterior; 
+- [x] Saltar para a linha de baixo; 
+- [x] Ir em diagonal para baixo;
+- [x] Percorrer determinada posição apenas uma vez;
 
 ```c
 // funcao que percorre a matriz e busca o caminho guloso
@@ -71,27 +77,32 @@ void caminharMatriz(int **mat, int n, int m){
    mat[0][0] = -1;
 	
    enquanto (i < quantidade(linhas) e j < quantidade(colunas)){	
- 
+    // condição 1
     se ( linha(i) atual = linha(máxima) ){
         soma recebe valor atual da matriz
         atribui -1 ao valor atual da matriz
         anda coluna
         INSTRUÇÃO --> CAMINHA P/ DIREITA
     }
-    senao{
+    // condição 2
+    senao se{
+    	// condição 2.1
         se ( coluna(j) atual = primeira coluna(j) ){
+            // condição 2.1.1
             se ( (direita >= abaixo) e (direita >= diagonal_direita) ){
                 anda coluna
                 INSTRUÇÃO --> CAMINHA P/ DIREITA
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }
+            // condição 2.1.2
             senao se ( (abaixo >= direita) e (abaixo >= diagonal_direita) ){
                 anda linha
                 INSTRUÇÃO --> CAMINHA P/ BAIXO
                 soma recebe valor atual da matriz 
                 atribui -1 ao valor atual da matriz
             }
+            // condição 2.1.3
             senao ( (diagonal_direita >= abaixo) e (diagonal_direita >= direita) ){
                 anda linha
                 anda coluna 
@@ -100,19 +111,23 @@ void caminharMatriz(int **mat, int n, int m){
                 atribui -1 ao valor atual da matriz
             }
         }
+        // condição 2.2
         senao se ( coluna(j) atual = coluna(máxima) ){
+            // condição 2.2.1
             se ( (abaixo >= esquerda) && (abaixo >= diagonal_esquerda) ){
                 anda linha
                 INSTRUÇÃO --> CAMINHA P/ BAIXO
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }
+            // condição 2.2.2
             senao se ( (esquerda >= abaixo) && (esquerda >= diagonal_esquerda) ){
                 volta coluna
                 INSTRUÇÃO --> CAMINHA P/ ESQUERDA
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }
+            // condição 2.2.3
             senao ( (diagonal_esquerda >= abaixo) && (diagonal_esquerda >= esquerda) ){
                 volta coluna
                 anda linha 
@@ -121,7 +136,9 @@ void caminharMatriz(int **mat, int n, int m){
                 atribui -1 ao valor atual da matriz
             }
         }
-        senao (caso esteja no meio){   
+        // condição 2.3
+        senao (caso geral){   
+            // condição 2.3.1
             se ( (abaixo >= esquerda)  e  (abaixo >= direita)
              e   (abaixo >= diagonal_esquerda) e (abaixo >= diagonal_direita) ){
                 anda linha
@@ -129,6 +146,7 @@ void caminharMatriz(int **mat, int n, int m){
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }   
+            // condição 2.3.2
             senao se ( (esquerda >= abaixo) e (esquerda >= direita) 
                    e   (esquerda >= diadonal_esquerda) e (esquerda >= diagonal_direita) ){
                 volta coluna
@@ -136,6 +154,7 @@ void caminharMatriz(int **mat, int n, int m){
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }
+            // condição 2.3.3
             senao se ( (direita >= abaixo) e (direita >= esquerda) e
                	      e   (direita >= diagonal_esquerda) e (direita >= diagonal_direita) ){
                 anda coluna
@@ -143,6 +162,7 @@ void caminharMatriz(int **mat, int n, int m){
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }
+            // condição 2.3.4
             senao se ( (diagonal_esquerda >= diagonal_direita) ){
                 volta coluna
                 anda linha
@@ -150,6 +170,7 @@ void caminharMatriz(int **mat, int n, int m){
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }
+            // condição 2.3.5
             senao ( (diagonal_direita >= diagonal_esquerda) ){
                 anda coluna
                 anda linha 
@@ -159,6 +180,7 @@ void caminharMatriz(int **mat, int n, int m){
             }
         }
     }
+    // condição 3
     se ( (linha(i) = linha(máxima)) e (coluna(j) = coluna(máxima)) ){
         soma recebe valor atual da matriz
         atribui -1 ao valor atual da matriz
@@ -169,116 +191,14 @@ void caminharMatriz(int **mat, int n, int m){
 }
 ```
 
-## Método de Contar Instruções
+## Método de Caminho Guloso
 
 <p align="justify">
 Partindo do apresentado, busquei criar um loop que trabalha até chegar ao último termo da matriz N x N. Além disso, apliquei as ideias do <code>brainstorm</code>, implementando as condições previstas, ajustando para que o valor da soma fosse guardado e criando um método para atribuir o <code>-1</code> ao valor das posições NxN após serem percorridas, de acordo com as regras do programa, a fim de marcar o caminho percorrido na matriz.
 </p>
 
 ```c
-//funcao que percorrera a matriz e contara as instrucoes
-int instructCounter(int n, int A[n][n]){
-    int sum, i = 0, j = 0;
-    sum = A[0][0]; //starta a soma na posição [0][0]
-    A[0][0] = -1; //atribui -1 ao valor da posição [0][0]
-    //loop enquanto i e j < n
-    while(i < n && j < n){
-        //*condicao 1*
-        if(j == 0 && i < (n-1)){
-            //*condicao 1.1*
-            if((A[i][j+1] >= A[i+1][j]) && (A[i][j+1] != -1)){
-                j++; //j+1
-                sum += A[i][j]; //soma = soma + valor escolhido de A[i][j]
-                A[i][j] = -1; //atribui -1 a posicao escolhida
-                //*condicao 1.1*/ escolho: DIREITA /
-            }
-            //*condicao 1.2*
-            else{
-                i++;
-                sum += A[i][j]; 
-                A[i][j] = -1; 
-                //*condicao 1.2*/ escolho: ABAIXO / 
-            }
-        }
-        //*condicao 2*
-        else if(i == (n-1)){
-            j++;
-            sum += A[i][j];
-            A[i][j] = -1;
-            //*condicao 2*/ DIREITA /
-        }
-        //*condicao 3*
-        else if(j == n-1){
-            //*condicao 3.1*/ escolho: ESQUERDA /
-            if((A[i][j-1] >= A[i+1][j]) && (A[i][j-1] != -1)){
-                j--;
-                sum += A[i][j];
-                A[i][j] = -1;
-            }
-            //*condicao 3.2*/ escolho: ABAIXO /
-            else{
-                i++;
-                sum += A[i][j];
-                A[i][j] = -1;
-            }
-        }
-        //*condicao 4*
-        else{
-            //*condicao 4.1*
-            if(A[i][j+1] == -1){
-                //*condicao 4.1.1*/ escolho: ABAIXO /
-                if(A[i+1][j] >= A[i][j-1]){
-                    i++; 
-                    sum += A[i][j];
-                    A[i][j] = -1; 
-                }
-                //*condicao 4.1.2*/ escolho: ESQUERDA / 
-                else{
-                    j--;
-                    sum += A[i][j];
-                    A[i][j] = -1;
-                }
-            }
-            //*condicao 4.2*
-            else if(A[i][j-1] == -1){
-                //*condicao 4.2.1*/ escolho ABAIXO/
-                if(A[i+1][j] >= A[i][j+1]){
-                    i++;
-                    sum += A[i][j];
-                    A[i][j] = -1;
-                }
-                //*condicao 4.2.2*/ escolho: DIREITA /
-                else{
-                    j++;
-                    sum += A[i][j];
-                    A[i][j] = -1;
-                }
-            }
-            //*condicao 4.3*
-            else{
-                //*condicao 4.3.1*/ escolho: ABAIXO/
-                if((A[i+1][j] >=  A[i][j+1]) && (A[i+1][j] >= A[i][j-1])){
-                    i++;
-                    sum += A[i][j];
-                    A[i][j] = -1;
-                }
-                //*condicao 4.3.2*/ escolho: DIREITA /
-                else if((A[i][j+1] >= A[i+1][j]) && (A[i][j+1] >= A[i][j-1])){
-                    j++;
-                    sum += A[i][j];
-                    A[i][j] = -1;
-                }
-                //*condicao 4.3.3*/ escolho: ESQUERDA /
-                else if((A[i][j-1] >= A[i+1][j]) && (A[i][j-1] >= A[i][j+1])){
-                    j--;
-                    sum += A[i][j];
-                    A[i][j] = -1;
-                }
-            }
-        }
-    }
-    return sum; //retorna o valor final da soma
-}
+
 ```
 ## Testando
 <p align="justify">
@@ -329,7 +249,7 @@ Esse pequeno exemplo possui um arquivo Makefile que realiza todo o procedimento 
 # Contatos
 
 <div style="display: inline-block;">
-<a href="">
+<a href="https://t.me/celso_vsf">
 <img align="center" height="20px" width="90px" src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"/> 
 </a>
 
