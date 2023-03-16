@@ -10,14 +10,22 @@
 <p> </p>
 
 ## Problema
+<p align="justify">
+O objetivo desse trabalho é elaborar um programa para caminhar por um conjunto de matrizes N x N, com o valor de N e as matrizes sendo fornecidas como entrada do programa em formato de arquivo, objetivando encontrar o maior valor final seguindo um conjunto de regras preestabelecidas.
 
-Elabore um pequeno programa que utilize uma matriz N x N, com o valor de N fornecido como entrada do programa, para executar a seguinte operação:
-- Criar um sistema que leia K matrizes quadradas no tamanho NxN.
-- Seu programa deve enumerá-las, de forma a deixa-las organizadas para processamento. 
-- Partindo da primeira matriz, você deve iniciar de um ponto preestabelecido, esse pode ser fornecido pelo usuário ou estar contido em arquivos extras de configuração. Não é permitido definir diretamente no código. 
-- A partir da primeira matriz, você tem como regras: (a) avançar para a próxima coluna; (b) retroceder para coluna anterior; (c)  saltar para a linha de baixo; (d) ir em diagonal para baixo. Todas essas regras só se aplicam se a casa (posição i,j da matriz) ainda não tenha sido descoberta ou já processada.
-- Para caminhar você deve sempre optar pelo valor da próxima casa, valor esse que deve ser o maior dentre eles. Caso haja empate entre casas, crie uma regra para adotar sempre uma mesma decisão de caminhamento. 
-- Ao alcançar a última linha e coluna da matriz, selecione a próxima matriz e repita todo o processo novamente. Por fim, apresente ao usuário qual foi o caminho adotado e qual a soma obtida do caminho realizado. 
+1. Criar um sistema que leia K matrizes quadradas no tamanho NxN.
+2. Seu programa deve enumerá-las, de forma a deixa-las organizadas para processamento. 
+3. Partindo da primeira matriz, você deve iniciar de um ponto preestabelecido, esse pode ser fornecido pelo usuário ou estar contido em arquivos extras de configuração. Não é permitido definir diretamente no código. 
+4. A partir da primeira matriz, você tem como regras: 
+   - Avançar para a próxima coluna; 
+   - Retroceder para coluna anterior; 
+   - Saltar para a linha de baixo; 
+   - Ir em diagonal para baixo;
+   - Observação: Todas essas regras só se aplicam se a casa (posição i,j da matriz) ainda não tenha sido descoberta ou já processada.
+5. Para caminhar você deve sempre optar pelo valor da próxima casa, valor esse que deve ser o maior dentre eles. Caso haja empate entre casas, crie uma regra para adotar sempre uma mesma decisão de caminhamento. 
+6. Ao alcançar a última linha e coluna da matriz, selecione a próxima matriz e repita todo o processo novamente. Por fim, apresente ao usuário qual foi o caminho adotado e qual a soma obtida do caminho realizado. 
+	
+</p>
 
 ## Beginning
 <p align="justify">
@@ -245,7 +253,7 @@ int instructCounter(int n, int A[n][n]){
 </p>
 
 
-
+<!--
 ## Questionamentos Finais
 </p>
 1) - Há mais de uma maneira de resolver esse problema ?
@@ -263,3 +271,4 @@ Presumo que dentro do conteúdo de estrutura de dados há um meio para armazenar
 <p align="justify">
 Pelo que pude notar sim, uma vez que o caminho seguido pelo programa, através da regra definida previamente pelo professor, mostra que nem sempre ocorre a escolha dos maiores valores dentro da matriz, quando na verdade o algoritmo escolhe os maiores valores "próximos" ao valor escolhido anteriormente, podendo estes serem variados devido ao fator randômico da matriz, e nem sempre os maiores possiveis dentro de toda a matriz gerada.
 </p>
+-->
