@@ -37,16 +37,18 @@ O conceito por trás da expressão em destaque gira em torno de percorrer uma ma
 	<img src="imgs/esquema.png"/> 
 </p>
 
-## Brainstorm
+## Lógica Utilizada
 <p align="justify">
-Para a lógica do contador de instruções precisei organizar um <code>brainstorm</code> buscando analisar as possíveis condições que o programa deveria seguir para se manter dentro das regras prescritas pelo professor, sendo elas:
+A lógica utilizada de percorrer o caminho seguindo as regras apresentadas pelo professor consistiu em 3 condições maiores e diversas sub-condições dentro delas. Foi necessário organizar um tipo de <code>brainstorm</code> buscando analisar as possíveis condições que o programa deveria seguir para se manter dentro do caminho esperado, foi pensado no seguinte esquema:
 </p>
 
+<!--
 - [x] Avançar para a próxima coluna; 
 - [x] Retroceder para coluna anterior; 
 - [x] Saltar para a linha de baixo; 
 - [x] Ir em diagonal para baixo;
 - [x] Percorrer determinada posição apenas uma vez;
+-->
 
 ```c
 // funcao que percorre a matriz e busca o caminho guloso
