@@ -64,14 +64,14 @@ função caminharMatriz(){
    mat[0][0] = -1;
 	
    enquanto (i < quantidade(linhas) e j < quantidade(colunas)){	
-    // condição 1
+    // CONDIÇÃO 1
     se ( linha(i) atual = linha(máxima) ){
         soma recebe valor atual da matriz
         atribui -1 ao valor atual da matriz
         anda coluna
         INSTRUÇÃO --> CAMINHA P/ DIREITA
     }
-    // condição 2
+    // CONDIÇÃO 2
     senao se{
     	// condição 2.1
         se ( coluna(j) atual = primeira coluna(j) ){
@@ -167,7 +167,7 @@ função caminharMatriz(){
             }
         }
     }
-    // condição 3
+    // CONDIÇÃO 3
     se ( (linha(i) = linha(máxima)) e (coluna(j) = coluna(máxima)) ){
         soma recebe valor atual da matriz
         atribui -1 ao valor atual da matriz
