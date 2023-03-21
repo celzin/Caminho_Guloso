@@ -52,7 +52,7 @@ A lógica utilizada de percorrer o caminho seguindo as regras apresentadas pelo 
 
 ```c
 // funcao que percorre a matriz e busca o caminho guloso
-void caminharMatriz(int **mat, int n, int m){
+função caminharMatriz(){
    
    // inicializa i, j e soma
    int i=0, j=0, sum=0;
