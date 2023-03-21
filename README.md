@@ -28,30 +28,14 @@ O objetivo desse trabalho é elaborar um programa para caminhar por um conjunto 
 	
 </p>
 
-## 
+## O que seria "Caminho Guloso"?
 <p align="justify">
-Para o desenvolvimento de uma matriz N x N com números inteiros aleatórios de 0 a 99, utilizei o método de ordenção em bolha para criar um loop, então criei os métodos <code>startMatriz</code> para gerar a matriz randômica e <code>printMatriz</code> para imprimi-la.
+O conceito por trás da expressão em destaque gira em torno de percorrer uma matriz de NxM elementos, de forma que caminhemos ao longo da matriz escolhendo os maiores valores possíveis contidos nela, evitando passar por valores já percorridos e voltar linhas, ou seja, subir não é uma opção. Caso não tenha ficado claro, basta observar as imagens abaixo a fim de se orientar.
 </p>
 
-
-
-```c
-void startMatriz(int n, int A[n][n]){
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < n; j++){
-            A[i][j] = rand()%99;
-        }
-    }
-}
-void printMatriz(int n, int A[n][n]){
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < n; j++){
-            printf("| %d |\t", A[i][j]);
-        }
-        printf("\n");
-    }
-}
-```
+<p align="center">
+	<img src="imgs/"/> 
+</p>
 
 ## Brainstorm
 <p align="justify">
