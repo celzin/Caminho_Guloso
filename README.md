@@ -192,15 +192,11 @@ Além disso, apliquei as ideias do <code>brainstorm</code>, implementando as con
 ```
 ## Testes de execução
 <p align="justify">
-	Criando um exemplo de teste para o método <code>instructCounter</code> para uma matriz com N = 7.
+	Criando um exemplo de teste da aplicação para uma matriz com 4x4, contendo 3 matrizes no arquivo que será lido.
 </p>
 
 <p align="center">
 	<img src="imgs/"/> 
-</p>
-
-<p align="center">
-	28 + 43 + 72 + 79 + 41 + 54 + 79 + 55 + 98 + 76 + 95 + 54 + 51 + 43 + 59 + 20 + 29 = 976
 </p>
 
 <!--
