@@ -34,7 +34,7 @@ O conceito por trás da expressão em destaque gira em torno de percorrer uma ma
 </p>
 
 <p align="center">
-	<img src="imgs/"/> 
+	<img src="imgs/esquema.png"/> 
 </p>
 
 ## Brainstorm
