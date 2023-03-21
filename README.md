@@ -178,7 +178,7 @@ função caminharMatriz(){
 }
 ```
 
-## Método de Caminho Guloso
+## Solução para o Problema
 
 <p align="justify">
 Partindo do apresentado, busquei criar um loop que trabalha até chegar ao último termo da matriz N x N. Além disso, apliquei as ideias do <code>brainstorm</code>, implementando as condições previstas, ajustando para que o valor da soma fosse guardado e criando um método para atribuir o <code>-1</code> ao valor das posições NxN após serem percorridas, de acordo com as regras do programa, a fim de marcar o caminho percorrido na matriz.
