@@ -193,7 +193,7 @@ A frente, dando continuidade ao tratamento do arquivo foi criado o método <code
 
 Adiante foi criado um método <code>readFile</code> ao qual de fato faz a leitura do arquivo.
 <p align="center">
-	<img src="imgs/readspace.png"/> 
+	<img src="imgs/readfile.png"/> 
 </p>
 
 Além disso, apliquei as ideias do <code>brainstorm</code>, implementando as condições previstas na função <code>caminharMatriz()</code>, ajustando para que o valor da soma fosse guardado e criando um método para atribuir o <code>-1</code> ao valor das posições <code>[i][j]</code> após serem percorridas, de acordo com as regras do programa, a fim de marcar o caminho percorrido na matriz.
