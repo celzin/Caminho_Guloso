@@ -200,7 +200,7 @@ Partindo do apresentado como problema, a ideia principal para solução gira em 
 </p>
 
 <p align="justify">
-A frente, dando sequência ao tratamento de arquivo foi criado o método <code>readSpace</code> ao qual de fato faz a leitura do arquivo e conta os espaços em branco entre as matrizes a fim de demarcá-las e separá-las a fim de serem passadas para o método <code>caminharMatriz</code> que fará todo o processo percorrendo a matriz conforme as regras previamente expostas.
+A frente, dando sequência ao tratamento de arquivo foi criado o método <code>readSpace</code> ao qual de fato faz a leitura do arquivo e conta os espaços em branco entre as matrizes a fim de demarcar e separar as diversas matrizes ao longo do arquivo, que mais adiante serão passadas para o método <code>caminharMatriz</code> que fará todo o processo percorrendo a matriz conforme as regras previamente expostas.
 </p>
 <p align="center">
 	<img src="imgs/readspace.png" width="400"/> 
