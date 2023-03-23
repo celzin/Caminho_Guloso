@@ -250,19 +250,20 @@ Pelo que pude notar sim, uma vez que o caminho seguido pelo programa, através d
 -->
 
 # Compilação e Execução
+
 <p align="justify">
-Primeiramente é necessário incluir um arquivo nomeado preferencialmente de <input.data> dentro da pasta <code>dataset</code>, devendo conter nele:
+Primeiramente, para o correto funcionamento do programa é necessário incluir um arquivo nomeado preferencialmente de <code>input.data</code> dentro da pasta <code>dataset</code>, devendo conter nele:
 	
 - Em sua primeira linha: os valores NxN que serão assumidos pelas matrizes geradas
 - Logo em seguida as matrizes espaçadas conforme o exemplo abaixo
 </p>
 
-<p align="justify">
-Esse programa possui um arquivo Makefile que realiza todo o procedimento de compilação e execução. Para tanto, temos as seguintes diretrizes de execução:
+<p align="center">
+	<img src="imgs/input.png" width="350"/> 
 </p>
 
-<p align="center">
-	<img src="imgs/"/> 
+<p align="justify">
+Por fim, esse programa possui um arquivo Makefile que realiza todo o procedimento de compilação e execução. Para tanto, temos as seguintes diretrizes de execução:
 </p>
 
 | Comando                |  Função                                                                                               |                     
