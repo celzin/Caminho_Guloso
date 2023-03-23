@@ -9,7 +9,7 @@
 <p> </p>
 <p> </p>
 
-## Apresentação do Problema
+# Apresentação do Problema
 <p align="justify">
 O objetivo desse trabalho é elaborar um programa para caminhar por um conjunto de matrizes N x N, com o valor de N e as matrizes sendo fornecidas como entrada do programa em formato de arquivo, objetivando encontrar o maior valor final seguindo um conjunto de regras preestabelecidas.
 </p>
@@ -40,7 +40,7 @@ O objetivo desse trabalho é elaborar um programa para caminhar por um conjunto 
 	6️⃣ Ao alcançar a última linha e coluna da matriz, selecione a próxima matriz e repita todo o processo novamente. Por fim, apresente ao usuário qual foi o 		caminho adotado e qual a soma obtida do caminho realizado	
 </p>
 
-## O que seria "Caminho Guloso"?
+# O que seria "Caminho Guloso"?
 <p align="justify">
 O conceito por trás da expressão em destaque gira em torno de percorrer uma matriz de NxN elementos, de forma que caminhemos ao longo da matriz escolhendo os maiores valores possíveis contidos nela, evitando passar por valores já percorridos e voltar linhas, ou seja, subir não é uma opção. Caso não tenha ficado claro, basta observar as imagens abaixo a fim de se orientar.
 </p>
@@ -49,7 +49,7 @@ O conceito por trás da expressão em destaque gira em torno de percorrer uma ma
 	<img src="imgs/esquema.png" width="600"/> 
 </p>
 
-## Lógica
+# Lógica para Caminhar na Matriz
 <p align="justify">
 A lógica utilizada de percorrer o caminho seguindo as regras apresentadas pelo professor consistiu em 3 condições maiores e diversas sub-condições dentro delas. Foi necessário organizar um tipo de <code>brainstorm</code> buscando analisar as possíveis condições que o programa deveria seguir para se manter dentro do caminho esperado, assim foi pensado no seguinte esquema:
 </p>
@@ -190,7 +190,7 @@ função caminharMatriz(){
 }
 ```
 
-## Solução do Problema
+# Solução do Problema
 
 <p align="justify">
 Partindo do apresentado como problema, a ideia principal para solução gira em torno do tratamento de arquivos. Desse modo, primeiramente criou-se o método <code>tokenizarLinha</code> que trabalha fazendo a leitura da primeira linha apresentada no arquivo, a qual representa o tamanho NxN das matrizes geradas e que será usada ao decorrer do programa para o tratamento do tamanho das matrizes. Logo em seguida gerou-se o método <code>tokenizarMatriz</code> a fim de tokenizar as matrizes geradas no arquivo.
@@ -220,7 +220,7 @@ Além disso, apliquei as ideias do <code>brainstorm</code>, implementando as con
 ```c
 
 ```
-## Testes de execução
+# Testes de execução
 <p align="justify">
 	Criando um exemplo de teste da aplicação para uma matriz com 4x4, contendo 3 matrizes no arquivo que será lido.
 </p>
@@ -249,10 +249,21 @@ Pelo que pude notar sim, uma vez que o caminho seguido pelo programa, através d
 </p>
 -->
 
-## Compilação e Execução
+# Compilação e Execução
+<p align="justify">
+Primeiramente é necessário incluir um arquivo nomeado preferencialmente de <input.data> dentro da pasta <code>dataset</code>, devendo conter nele:
+	
+- Em sua primeira linha: os valores NxN que serão assumidos pelas matrizes geradas
+- Logo em seguida as matrizes espaçadas conforme o exemplo abaixo
+</p>
 
-Esse pequeno exemplo possui um arquivo Makefile que realiza todo o procedimento de compilação e execução. Para tanto, temos as seguintes diretrizes de execução:
+<p align="justify">
+Esse programa possui um arquivo Makefile que realiza todo o procedimento de compilação e execução. Para tanto, temos as seguintes diretrizes de execução:
+</p>
 
+<p align="center">
+	<img src="imgs/"/> 
+</p>
 
 | Comando                |  Função                                                                                               |                     
 | -----------------------| ------------------------------------------------------------------------------------------------------|
