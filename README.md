@@ -12,19 +12,32 @@
 ## Apresentação do Problema
 <p align="justify">
 O objetivo desse trabalho é elaborar um programa para caminhar por um conjunto de matrizes N x N, com o valor de N e as matrizes sendo fornecidas como entrada do programa em formato de arquivo, objetivando encontrar o maior valor final seguindo um conjunto de regras preestabelecidas.
+</p>
 
-1. Criar um sistema que leia K matrizes quadradas no tamanho NxN.
-2. Seu programa deve enumerá-las, de forma a deixa-las organizadas para processamento. 
-3. Partindo da primeira matriz, você deve iniciar de um ponto preestabelecido, esse pode ser fornecido pelo usuário ou estar contido em arquivos extras de configuração. Não é permitido definir diretamente no código. 
-4. A partir da primeira matriz, você tem como regras: 
-   - Avançar para a próxima coluna; 
-   - Retroceder para coluna anterior; 
-   - Saltar para a linha de baixo; 
-   - Ir em diagonal para baixo;
-   - Observação: Todas essas regras só se aplicam se a casa (posição i,j da matriz) ainda não tenha sido descoberta ou já processada.
-5. Para caminhar você deve sempre optar pelo valor da próxima casa, valor esse que deve ser o maior dentre eles. Caso haja empate entre casas, crie uma regra para adotar sempre uma mesma decisão de caminhamento. 
-6. Ao alcançar a última linha e coluna da matriz, selecione a próxima matriz e repita todo o processo novamente. Por fim, apresente ao usuário qual foi o caminho adotado e qual a soma obtida do caminho realizado. 
+
+<p align="justify">
+	1️⃣ Criar um sistema que leia K matrizes quadradas no tamanho NxN.
+</p>
+<p align="justify">
+	2️⃣ Seu programa deve enumerá-las, de forma a deixa-las organizadas para processamento.
+</p>
+<p align="justify">
+	3️⃣ Partindo da primeira matriz, você deve iniciar de um ponto preestabelecido, esse pode ser fornecido pelo usuário ou estar contido em arquivos extras de 		configuração. Não é permitido definir diretamente no código.
+</p>	
+<p align="justify">
+	4️⃣ A partir da primeira matriz, você tem como regras:
 	
+	➡️ Avançar para a próxima coluna;
+	⬅️ Retroceder para coluna anterior;
+	⬇️ Saltar para a linha de baixo;
+	↙️ Ir em diagonal para baixo; ↘️
+	⚠️ Observação: Todas essas regras só se aplicam se a casa (posição i,j da matriz) ainda não tenha sido descoberta ou já processada.
+</p>
+<p align="justify">
+	5️⃣ Para caminhar você deve sempre optar pelo valor da próxima casa, valor esse que deve ser o maior dentre eles. Caso haja empate entre casas, crie uma regra 		para adotar sempre uma mesma decisão de caminhamento.
+</p>
+<p align="justify">
+	6️⃣ Ao alcançar a última linha e coluna da matriz, selecione a próxima matriz e repita todo o processo novamente. Por fim, apresente ao usuário qual foi o 		caminho adotado e qual a soma obtida do caminho realizado	
 </p>
 
 ## O que seria "Caminho Guloso"?
