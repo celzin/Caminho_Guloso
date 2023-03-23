@@ -83,6 +83,20 @@ Ademais, foram aplicadas as ideias apresentadas previamente no <code>brainstorm<
 Criando um exemplo de teste da aplicação para uma matriz 7x7, contendo 3 matrizes no arquivo que será lido, caso o programa funcione como o esperado, teremos o seguinte resultado.
 </p>
 
+<p align="center">
+<img src="imgs/input7x7.png" width="450"/> 
+</p>
+<p align="center">
+<em>Imagem 3: Entrada em formato de arquivo com 3 matrizes de tamanho 7x7.</em>
+</p>
+
+<p align="center">
+<img src="imgs/teste3.png"/> 
+</p>
+<p align="center">
+<em>Imagem 4: Saída no terminal após execução da aplicação monstrando as 3 matrizes lidas, o caminho percorrido e a soma deste em cada uma delas.</em>
+</p>
+
 <!--
 ## Questionamentos Finais
 </p>
@@ -113,10 +127,10 @@ Primeiramente, para o correto funcionamento do programa é necessário incluir u
 </p>
 
 <p align="center">
-<img src="imgs/input.png" width="350"/> 
+<img src="imgs/input.png" width="250"/> 
 </p>
 <p align="center">
-<em>Imagem 3: Demonstração do formato de arquivo aceito pelo programa.</em>
+<em>Imagem 5: Demonstração do formato de arquivo aceito pelo programa.</em>
 </p>
 
 <p align="justify">
