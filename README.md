@@ -81,7 +81,7 @@ função caminharMatriz(){
         soma recebe valor atual da matriz
         atribui -1 ao valor atual da matriz
         anda coluna
-        INSTRUÇÃO --> CAMINHA P/ DIREITA
+        INSTRUÇÃO --> CAMINHA P/ DIREITA ➡️
     }
     // CONDIÇÃO 2
     senao se{
@@ -90,14 +90,14 @@ função caminharMatriz(){
             // condição 2.1.1
             se ( (direita >= abaixo) e (direita >= diagonal_direita) ){
                 anda coluna
-                INSTRUÇÃO --> CAMINHA P/ DIREITA
+                INSTRUÇÃO --> CAMINHA P/ DIREITA ➡️
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }
             // condição 2.1.2
             senao se ( (abaixo >= direita) e (abaixo >= diagonal_direita) ){
                 anda linha
-                INSTRUÇÃO --> CAMINHA P/ BAIXO
+                INSTRUÇÃO --> CAMINHA P/ BAIXO ⬇️
                 soma recebe valor atual da matriz 
                 atribui -1 ao valor atual da matriz
             }
@@ -105,7 +105,7 @@ função caminharMatriz(){
             senao ( (diagonal_direita >= abaixo) e (diagonal_direita >= direita) ){
                 anda linha
                 anda coluna 
-                INSTRUÇÃO --> CAMINHA P/ DIAGONAL DIREITA
+                INSTRUÇÃO --> CAMINHA P/ DIAGONAL DIREITA ↘️
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }
@@ -115,14 +115,14 @@ função caminharMatriz(){
             // condição 2.2.1
             se ( (abaixo >= esquerda) && (abaixo >= diagonal_esquerda) ){
                 anda linha
-                INSTRUÇÃO --> CAMINHA P/ BAIXO
+                INSTRUÇÃO --> CAMINHA P/ BAIXO ⬇️
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }
             // condição 2.2.2
             senao se ( (esquerda >= abaixo) && (esquerda >= diagonal_esquerda) ){
                 volta coluna
-                INSTRUÇÃO --> CAMINHA P/ ESQUERDA
+                INSTRUÇÃO --> CAMINHA P/ ESQUERDA ⬅️
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }
@@ -130,7 +130,7 @@ função caminharMatriz(){
             senao ( (diagonal_esquerda >= abaixo) && (diagonal_esquerda >= esquerda) ){
                 volta coluna
                 anda linha 
-                INSTRUÇÃO --> CAMINHA P/ DIAGONAL ESQUERDA
+                INSTRUÇÃO --> CAMINHA P/ DIAGONAL ESQUERDA ↙️
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }
@@ -141,7 +141,7 @@ função caminharMatriz(){
             se ( (abaixo >= esquerda)  e  (abaixo >= direita)
              e   (abaixo >= diagonal_esquerda) e (abaixo >= diagonal_direita) ){
                 anda linha
-                INSTRUÇÃO --> CAMINHA P/ BAIXO
+                INSTRUÇÃO --> CAMINHA P/ BAIXO ⬇️
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }   
@@ -149,7 +149,7 @@ função caminharMatriz(){
             senao se ( (esquerda >= abaixo) e (esquerda >= direita) 
                    e   (esquerda >= diadonal_esquerda) e (esquerda >= diagonal_direita) ){
                 volta coluna
-                INSTRUÇÃO --> CAMINHA P/ ESQUERDA
+                INSTRUÇÃO --> CAMINHA P/ ESQUERDA ⬅️
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }
@@ -157,7 +157,7 @@ função caminharMatriz(){
             senao se ( (direita >= abaixo) e (direita >= esquerda) e
                	      e   (direita >= diagonal_esquerda) e (direita >= diagonal_direita) ){
                 anda coluna
-                INSTRUÇÃO --> CAMINHA P/ DIREITA
+                INSTRUÇÃO --> CAMINHA P/ DIREITA ➡️
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }
@@ -165,7 +165,7 @@ função caminharMatriz(){
             senao se ( (diagonal_esquerda >= diagonal_direita) ){
                 volta coluna
                 anda linha
-                INSTRUÇÃO --> CAMINHA P/ ESQUERDA
+                INSTRUÇÃO --> CAMINHA P/ ESQUERDA ⬅️
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }
@@ -173,7 +173,7 @@ função caminharMatriz(){
             senao ( (diagonal_direita >= diagonal_esquerda) ){
                 anda coluna
                 anda linha 
-                INSTRUÇÃO --> CAMINHA P/ DIAGONAL DIREITA
+                INSTRUÇÃO --> CAMINHA P/ DIAGONAL DIREITA ↘️
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }
