@@ -42,7 +42,7 @@ O objetivo desse trabalho é elaborar um programa para caminhar por um conjunto 
 
 # O que seria "Caminho Guloso"?
 <p align="justify">
-O conceito por trás da expressão em destaque gira em torno de percorrer uma matriz de NxN elementos, de forma que caminhemos ao longo da matriz escolhendo os maiores valores possíveis contidos nela, evitando passar por valores já percorridos e voltar linhas, ou seja, subir não é uma opção. Caso não tenha ficado claro, basta observar as imagens abaixo a fim de se orientar.
+	O conceito por trás da expressão <code>Caminho Guloso</code> em destaque gira em torno da ideia de percorrer uma matriz de <code>NxN</code> elementos, de forma a caminhar ao longo dessa matriz escolhendo os maiores valores possíveis contidos nela, evitando passar por valores já percorridos e voltar linhas, ou seja, subir ou passar por um valor previamente já percorrido não é uma opção. Caso não tenha ficado claro, basta observar as imagens abaixo a fim de se orientar.
 </p>
 
 <p align="center">
@@ -67,7 +67,7 @@ A lógica utilizada de percorrer o caminho seguindo as regras apresentadas pelo 
 # Solução do Problema
 
 <p align="justify">
-Partindo do apresentado como problema, a ideia principal para solução gira em torno do tratamento de arquivos. Desse modo, primeiramente criou-se o método <code>tokenizarLinha</code> que trabalha fazendo a quebra e leitura da primeira linha apresentada no arquivo, a qual representa o tamanho NxN das matrizes geradas e que será usada ao decorrer do programa para o tratamento do tamanho das matrizes. Logo em seguida gerou-se o método <code>tokenizarMatriz</code> a fim de tokenizar, ou seja, fragmentar cada fração do arquivo conforme a regra estabelecida e, nesse caso, asssumir como valores de uma matriz.
+Partindo do apresentado como problema, a ideia principal para solução gira em torno do tratamento de arquivos. Desse modo, primeiramente criou-se o método <code>tokenizarLinha</code> que trabalha fazendo a quebra e leitura da primeira linha apresentada no arquivo, a qual representa o tamanho <code>NxN</code> das matrizes geradas e que será usada ao decorrer do programa para o tratamento do tamanho das matrizes. Logo em seguida gerou-se o método <code>tokenizarMatriz</code> a fim de tokenizar, ou seja, fragmentar cada fração do arquivo conforme a regra estabelecida e, nesse caso, asssumir como valores de uma matriz.
 </p>
 
 <p align="justify">
