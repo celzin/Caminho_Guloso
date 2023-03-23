@@ -49,7 +49,7 @@ O conceito por trás da expressão em destaque gira em torno de percorrer uma ma
 	<img src="imgs/esquema.png" width="600"/> 
 </p>
 
-## Lógica Utilizada
+## Lógica
 <p align="justify">
 A lógica utilizada de percorrer o caminho seguindo as regras apresentadas pelo professor consistiu em 3 condições maiores e diversas sub-condições dentro delas. Foi necessário organizar um tipo de <code>brainstorm</code> buscando analisar as possíveis condições que o programa deveria seguir para se manter dentro do caminho esperado, assim foi pensado no seguinte esquema:
 </p>
