@@ -181,9 +181,21 @@ função caminharMatriz(){
 
 <p align="justify">
 Partindo do apresentado, busquei criar o método <code>tokenizarLinha</code> que trabalha tokebuzando a primeira linha apresentada no arquivo, a qual representa o tamanho NxN das matrizes geradas. E logo em seguida apliquei o método <code>tokenizarMatriz</code> a fim de tokenizar as matrizes geradas no arquivo.
-	
+
+<p align="center">
+	<img src="imgs/tokenizar.png"/> 
+</p>
+
+A frente, dando continuidade ao tratamento do arquivo foi criado o método <code>readSpace</code> ao qual de fato faz a leitura do arquivo e conta os espaços em branco entre as matrizes a fim de demarcá-las.
+<p align="center">
+	<img src="imgs/readspace.png"/> 
+</p>
+
 Adiante foi criado um método <code>readFile</code> ao qual de fato faz a leitura do arquivo.
-	
+<p align="center">
+	<img src="imgs/readspace.png"/> 
+</p>
+
 Além disso, apliquei as ideias do <code>brainstorm</code>, implementando as condições previstas na função <code>caminharMatriz()</code>, ajustando para que o valor da soma fosse guardado e criando um método para atribuir o <code>-1</code> ao valor das posições <code>[i][j]</code> após serem percorridas, de acordo com as regras do programa, a fim de marcar o caminho percorrido na matriz.
 </p>
 
