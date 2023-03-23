@@ -46,26 +46,22 @@ O conceito por trás da expressão em destaque gira em torno de percorrer uma ma
 </p>
 
 <p align="center">
-	<img src="imgs/esquema.png" width="600"/>
-	<em>Imagem 1: Diagrama esquemático das regras para percorrer a matriz</em>
+<img src="imgs/esquema.png" width="600"/>
+</p>
+<p align="center">
+<em>Imagem 1: Diagrama esquemático das regras para percorrer a matriz</em>
 </p>
 
 # Lógica para Caminhar na Matriz
 <p align="justify">
-A lógica utilizada de percorrer o caminho seguindo as regras apresentadas pelo professor consistiu em 3 condições maiores e diversas sub-condições dentro delas. Foi necessário organizar um tipo de <code>brainstorm</code> buscando analisar as possíveis condições que o programa deveria seguir para se manter dentro do caminho esperado, assim foi pensado no seguinte esquema:
+A lógica utilizada de percorrer o caminho seguindo as regras apresentadas pelo professor consistiu em 3 condições maiores e diversas sub-condições dentro delas. Foi necessário organizar um tipo de <code>brainstorm</code> buscando analisar as possíveis condições que o programa deveria seguir para se manter dentro do caminho esperado, assim chegou-se esquema lógico esboçado abaixo. (Obs.: A imagem abaixo não contém trechos de código, sendo apenas um esboço).
 </p>
 
-<!--
-- [x] Avançar para a próxima coluna; 
-- [x] Retroceder para coluna anterior; 
-- [x] Saltar para a linha de baixo; 
-- [x] Ir em diagonal para baixo;
-- [x] Percorrer determinada posição apenas uma vez;
--->
-
 <p align="center">
-	<img src="imgs/caminhar.png"/> 
-	<em>Imagem 2: Esboço da implementação do método para percorrer a matriz.</em>
+<img src="imgs/caminhar.png"/> 
+</p>
+<p align="center">
+<em>Imagem 2: Esboço da implementação do método para percorrer a matriz.</em>
 </p>
 
 # Solução do Problema
@@ -91,9 +87,6 @@ Por fim, foram aplicadas as ideias apresentadas previamente no <code>brainstorm<
 	Criando um exemplo de teste da aplicação para uma matriz com 4x4, contendo 3 matrizes no arquivo que será lido.
 </p>
 
-<p align="center">
-	<img src="imgs/"/> 
-</p>
 
 <!--
 ## Questionamentos Finais
@@ -125,8 +118,10 @@ Primeiramente, para o correto funcionamento do programa é necessário incluir u
 </p>
 
 <p align="center">
-	<img src="imgs/input.png" width="350"/> 
-	<em>Imagem 3: Demonstração do formato de arquivo aceito pelo programa.</em>
+<img src="imgs/input.png" width="350"/> 
+</p>
+<p align="center">
+<em>Imagem 3: Demonstração do formato de arquivo aceito pelo programa.</em>
 </p>
 
 <p align="justify">
