@@ -181,21 +181,26 @@ função caminharMatriz(){
 
 <p align="justify">
 Partindo do apresentado como problema, a ideia principal para solução gira em torno do tratamento de arquivos. Desse modo, primeiramente criou-se o método <code>tokenizarLinha</code> que trabalha fazendo a leitura da primeira linha apresentada no arquivo, a qual representa o tamanho NxN das matrizes geradas e que será usada ao decorrer do programa para o tratamento do tamanho das matrizes. Logo em seguida gerou-se o método <code>tokenizarMatriz</code> a fim de tokenizar as matrizes geradas no arquivo.
-
+</p>
 <p align="center">
 	<img src="imgs/tokenizar.png" width="900"/> 
 </p>
 
+<p align="justify">
 A frente, dando sequência ao tratamento de arquivo foi criado o método <code>readSpace</code> ao qual de fato faz a leitura do arquivo e conta os espaços em branco entre as matrizes a fim de demarcá-las e separá-las a fim de serem passadas para o método <code>caminharMatriz</code> que fará todo o processo percorrendo a matriz conforme as regras previamente expostas.
+</p>
 <p align="center">
 	<img src="imgs/readspace.png" width="400"/> 
 </p>
 
-Adiante foi criado um método <code>readFile</code> ao qual de fato faz a leitura do arquivo.
+<p align="justify">
+Adiante foi criado um método <code>readFile</code> ao qual de fato faz a leitura do arquivo implementando os métodos <code>tokenizarLinha</code> e <code>tokenizarMatriz</code>.
+</p>
 <p align="center">
 	<img src="imgs/readfile.png" width="900"/> 
 </p>
 
+<p align="justify">
 Além disso, apliquei as ideias do <code>brainstorm</code>, implementando as condições previstas na função <code>caminharMatriz()</code>, ajustando para que o valor da soma fosse guardado e criando um método para atribuir o <code>-1</code> ao valor das posições <code>[i][j]</code> após serem percorridas, de acordo com as regras do programa, a fim de marcar o caminho percorrido na matriz.
 </p>
 
