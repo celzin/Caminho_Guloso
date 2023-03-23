@@ -193,7 +193,7 @@ função caminharMatriz(){
 # Solução do Problema
 
 <p align="justify">
-Partindo do apresentado como problema, a ideia principal para solução gira em torno do tratamento de arquivos. Desse modo, primeiramente criou-se o método <code>tokenizarLinha</code> que trabalha fazendo a leitura da primeira linha apresentada no arquivo, a qual representa o tamanho NxN das matrizes geradas e que será usada ao decorrer do programa para o tratamento do tamanho das matrizes. Logo em seguida gerou-se o método <code>tokenizarMatriz</code> a fim de tokenizar as matrizes geradas no arquivo.
+Partindo do apresentado como problema, a ideia principal para solução gira em torno do tratamento de arquivos. Desse modo, primeiramente criou-se o método <code>tokenizarLinha</code> que trabalha fazendo a quebra e leitura da primeira linha apresentada no arquivo, a qual representa o tamanho NxN das matrizes geradas e que será usada ao decorrer do programa para o tratamento do tamanho das matrizes. Logo em seguida gerou-se o método <code>tokenizarMatriz</code> a fim de tokenizar, ou seja, fragmentar cada fração do arquivo conforme a regra estabelecida e, nesse caso, asssumir como valores de uma matriz.
 </p>
 <p align="center">
 	<img src="imgs/tokenizar.png" width="900"/> 
