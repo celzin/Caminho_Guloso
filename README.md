@@ -84,9 +84,8 @@ Por fim, foram aplicadas as ideias apresentadas previamente no <code>brainstorm<
 
 # Testes
 <p align="justify">
-	Criando um exemplo de teste da aplicação para uma matriz com 4x4, contendo 3 matrizes no arquivo que será lido.
+Criando um exemplo de teste da aplicação para uma matriz 7x7, contendo 3 matrizes no arquivo que será lido, caso o programa funcione como o esperado, teremos o seguinte resultado.
 </p>
-
 
 <!--
 ## Questionamentos Finais
