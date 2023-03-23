@@ -165,7 +165,7 @@ função caminharMatriz(){
             senao se ( (diagonal_esquerda >= diagonal_direita) ){
                 volta coluna
                 anda linha
-                INSTRUÇÃO --> CAMINHA P/ ESQUERDA ⬅️
+                INSTRUÇÃO --> CAMINHA P/ DIAGONAL ESQUERDA ↙️
                 soma recebe valor atual da matriz
                 atribui -1 ao valor atual da matriz
             }
