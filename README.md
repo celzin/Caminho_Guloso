@@ -252,7 +252,7 @@ Pelo que pude notar sim, uma vez que o caminho seguido pelo programa, através d
 # Compilação e Execução
 
 <p align="justify">
-Primeiramente, para o correto funcionamento do programa é necessário incluir um arquivo nomeado preferencialmente de <code>input.data</code> dentro da pasta <code>dataset</code>, devendo conter nele:
+Primeiramente, para o correto funcionamento do programa é necessário incluir um arquivo nomeado preferencialmente de <code>input.data</code> dentro da pasta <code>dataset</code>, devendo seguir o seguinte formato:
 	
 - Em sua primeira linha: os valores NxN que serão assumidos pelas matrizes geradas
 - Logo em seguida as matrizes espaçadas conforme o exemplo abaixo
