@@ -51,16 +51,8 @@ O conceito por trás da expressão em destaque gira em torno de percorrer uma ma
 
 # Lógica para Caminhar na Matriz
 <p align="justify">
-A lógica utilizada de percorrer o caminho seguindo as regras apresentadas pelo professor consistiu em 3 condições maiores e diversas sub-condições dentro delas. Foi necessário organizar um tipo de <code>brainstorm</code> buscando analisar as possíveis condições que o programa deveria seguir para se manter dentro do caminho esperado, assim foi pensado no seguinte esquema:
+A lógica utilizada de percorrer o caminho seguindo as regras apresentadas pelo professor consistiu em 3 condições maiores e diversas sub-condições dentro delas. Foi necessário organizar um tipo de <code>brainstorm</code> buscando analisar as possíveis condições que o programa poderia percorrer para se manter dentro do caminho esperado, assim foi pensado no esboço de diagrama exposto abaixo. (Obs.: A imagem abaixo não expõe trechos de código, apenas um esboço).
 </p>
-
-<!--
-- [x] Avançar para a próxima coluna; 
-- [x] Retroceder para coluna anterior; 
-- [x] Saltar para a linha de baixo; 
-- [x] Ir em diagonal para baixo;
-- [x] Percorrer determinada posição apenas uma vez;
--->
 
 <p align="center">
 	<img src="imgs/caminhar.png" width="900"/> 
