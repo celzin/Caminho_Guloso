@@ -46,16 +46,26 @@ O conceito por trás da expressão em destaque gira em torno de percorrer uma ma
 </p>
 
 <p align="center">
-	<img src="imgs/esquema.png" width="600"/> 
+	<img src="imgs/esquema.png" width="600"/>
+	<em>Imagem 1: Diagrama esquemático das regras para percorrer a matriz</em>
 </p>
 
 # Lógica para Caminhar na Matriz
 <p align="justify">
-A lógica utilizada de percorrer o caminho seguindo as regras apresentadas pelo professor consistiu em 3 condições maiores e diversas sub-condições dentro delas. Foi necessário organizar um tipo de <code>brainstorm</code> buscando analisar as possíveis condições que o programa poderia percorrer para se manter dentro do caminho esperado, assim foi pensado no esboço de diagrama exposto abaixo. (Obs.: A imagem abaixo não expõe trechos de código, apenas um esboço).
+A lógica utilizada de percorrer o caminho seguindo as regras apresentadas pelo professor consistiu em 3 condições maiores e diversas sub-condições dentro delas. Foi necessário organizar um tipo de <code>brainstorm</code> buscando analisar as possíveis condições que o programa deveria seguir para se manter dentro do caminho esperado, assim foi pensado no seguinte esquema:
 </p>
 
+<!--
+- [x] Avançar para a próxima coluna; 
+- [x] Retroceder para coluna anterior; 
+- [x] Saltar para a linha de baixo; 
+- [x] Ir em diagonal para baixo;
+- [x] Percorrer determinada posição apenas uma vez;
+-->
+
 <p align="center">
-	<img src="imgs/caminhar.png" width="900"/> 
+	<img src="imgs/caminhar.png"/> 
+	<em>Imagem 2: Esboço da implementação do método para percorrer a matriz.</em>
 </p>
 
 # Solução do Problema
@@ -63,27 +73,15 @@ A lógica utilizada de percorrer o caminho seguindo as regras apresentadas pelo 
 <p align="justify">
 Partindo do apresentado como problema, a ideia principal para solução gira em torno do tratamento de arquivos. Desse modo, primeiramente criou-se o método <code>tokenizarLinha</code> que trabalha fazendo a quebra e leitura da primeira linha apresentada no arquivo, a qual representa o tamanho NxN das matrizes geradas e que será usada ao decorrer do programa para o tratamento do tamanho das matrizes. Logo em seguida gerou-se o método <code>tokenizarMatriz</code> a fim de tokenizar, ou seja, fragmentar cada fração do arquivo conforme a regra estabelecida e, nesse caso, asssumir como valores de uma matriz.
 </p>
-<!--
-<p align="center">
-	<img src="imgs/tokenizar.png" width="900"/> 
-</p>
--->
+
 <p align="justify">
 A frente, dando sequência ao tratamento de arquivo foi criado o método <code>readSpace</code> ao qual de fato faz a leitura do arquivo e conta os espaços em branco entre as matrizes a fim de demarcar e separar as diversas matrizes ao longo do arquivo, que mais adiante serão passadas para o método <code>caminharMatriz</code> que fará todo o processo percorrendo a matriz conforme as regras previamente expostas.
 </p>
-<!--
-<p align="center">
-	<img src="imgs/readspace.png" width="400"/> 
-</p>
--->
+
 <p align="justify">
 Adiante foi criado um método <code>readFile</code> ao qual de fato faz a leitura do arquivo implementando os métodos <code>tokenizarLinha</code> e <code>tokenizarMatriz</code>.
 </p>
-<!--
-<p align="center">
-	<img src="imgs/readfile.png" width="900"/> 
-</p>
--->
+
 <p align="justify">
 Por fim, foram aplicadas as ideias apresentadas previamente no <code>brainstorm</code>, implementando as condições previstas na função <code>caminharMatriz()</code>, que basicamente funciona ajustando para que o valor da <code>soma</code> fosse guardado e criando um método para atribuir o <code>-1</code> ao valor das posições <code>[i][j]</code> após serem percorridas, de acordo com as regras do programa, a fim de marcar o caminho percorrido na matriz.
 </p>
@@ -128,6 +126,7 @@ Primeiramente, para o correto funcionamento do programa é necessário incluir u
 
 <p align="center">
 	<img src="imgs/input.png" width="350"/> 
+	<em>Imagem 3: Demonstração do formato de arquivo aceito pelo programa.</em>
 </p>
 
 <p align="justify">
