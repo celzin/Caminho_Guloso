@@ -71,15 +71,11 @@ Partindo do problema apresentado, a ideia principal para sua solução gira em t
 </p>
 
 <p align="justify">
-A frente, dando sequência ao tratamento de arquivo foi criado o método <code>readSpace</code> ao qual de fato faz a leitura do arquivo e conta os espaços em branco entre as matrizes a fim de demarcar e separar as diversas matrizes ao longo do arquivo, que mais adiante serão passadas para o método <code>caminharMatriz</code> que fará todo o processo percorrendo a matriz conforme as regras previamente expostas.
+A frente, dando sequência ao tratamento de arquivo foi criado o método <code>readSpace</code> ao qual faz a leitura do arquivo e conta os espaços em branco entre as matrizes a fim de demarcar e separar as diversas matrizes ao longo do arquivo. Em conjunto tem-se o método <code>readFile</code> ao qual de fato faz a leitura do arquivo implementando os métodos <code>tokenizarLinha</code> e <code>tokenizarMatriz</code> previamente já exemplificados. 
 </p>
 
 <p align="justify">
-Adiante foi criado um método <code>readFile</code> ao qual de fato faz a leitura do arquivo implementando os métodos <code>tokenizarLinha</code> e <code>tokenizarMatriz</code>.
-</p>
-
-<p align="justify">
-Por fim, foram aplicadas as ideias apresentadas previamente no <code>brainstorm</code>, implementando as condições previstas na função <code>caminharMatriz()</code>, que basicamente funciona ajustando para que o valor da <code>soma</code> fosse guardado e criando um método para atribuir o <code>-1</code> ao valor das posições <code>[i][j]</code> após serem percorridas, de acordo com as regras do programa, a fim de marcar o caminho percorrido na matriz.
+Ademais, foram aplicadas as ideias apresentadas previamente no <code>brainstorm</code>, implementando as condições previstas na função <code>caminharMatriz()</code>, que basicamente funciona ajustando para que o valor da <code>soma</code> fosse guardado e criando um método para atribuir o <code>-1</code> ao valor das posições <code>[i][j]</code> após serem percorridas, de acordo com as regras do programa, a fim de marcar o caminho percorrido na matriz. Ao final, temos o método o método <code>readFile()</code> sendo chamado na <code>Main</code>, que como foi exposto será muito importante para o tratamento de arquivos no programa vigente e, por fim, tem-se a função <code>printCaminho()</code> que executa a função <code>caminharMatriz()</code> sempre que uma nova matriz do arquivo é lida e imprime as matrizes, juntamente com o caminho percorrido por cada uma delas. 
 </p>
 
 # Testes
