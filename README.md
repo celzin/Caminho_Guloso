@@ -40,9 +40,11 @@ O objetivo desse trabalho é elaborar um programa para caminhar por um conjunto 
 	6️⃣ Ao alcançar a última linha e coluna da matriz, selecione a próxima matriz e repita todo o processo novamente. Por fim, apresente ao usuário qual foi o 		caminho adotado e qual a soma obtida do caminho realizado	
 </p>
 
-# O que seria "Caminho Guloso"?
+# O que seria "Algoritmo Guloso"?
 <p align="justify">
-	O conceito por trás da expressão <code>Caminho Guloso</code> em destaque gira em torno da ideia de percorrer uma matriz de <code>NxN</code> elementos, de forma a caminhar ao longo dessa matriz escolhendo os maiores valores possíveis contidos nela, evitando passar por valores já percorridos e voltar linhas, ou seja, subir ou passar por um valor previamente já percorrido não é uma opção. Caso não tenha ficado claro, basta observar a imagem abaixo a fim de se orientar.
+
+O conceito por trás da expressão [<code>Algoritmo Guloso</code>](https://www.ime.usp.br/~pf/analise_de_algoritmos/aulas/guloso.html) em destaque gira em torno da ideia de percorrer uma matriz de <code>NxN</code> elementos, de forma a caminhar ao longo dessa matriz escolhendo os maiores valores possíveis contidos nela, evitando passar por valores já percorridos e voltar linhas, ou seja, subir ou passar por um valor previamente já percorrido não é uma opção. Caso não tenha ficado claro, basta observar a imagem abaixo a fim de se orientar.
+	
 </p>
 
 <p align="center">
