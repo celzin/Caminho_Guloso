@@ -14,14 +14,14 @@ void printMatriz(int **mat, int n, int m){
 void printCaminho(int **mat, int n, int m){
     
     
-    printf("\n--------------Inicio Matriz-------------\n");
+    printf("\n----------------Inicio Tratamento--------------\n");
     printf("\nMatriz Lida: \n");
     printMatriz(mat, n, m);
-	int sum = caminharMatriz(mat, n, m);
+    int sum = caminharMatriz(mat, n, m);
     printf("\nCaminho Percorrido: \n");
-	printMatriz(mat, n, m);
+    printMatriz(mat, n, m);
     printf("\nSoma: %d\n", sum);
-    printf("\n----------------Fim Matriz--------------\n");
+    printf("\n------------------Fim Tratamento---------------\n");
 }
 
 // funcao que tokeniza a matriz do arquivo
